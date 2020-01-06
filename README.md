@@ -7,6 +7,6 @@ Xamarin-Android에서 이용가능한 Mupdf Binding  Library
 **archetecture:** arm-7 , arm-64
 
 # 사용 #
-        using Com.Artifex.MuPdfDemo;
+    using Com.Artifex.MuPdfDemo;
 
   
