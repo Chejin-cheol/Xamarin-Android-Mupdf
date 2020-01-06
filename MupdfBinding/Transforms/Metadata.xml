@@ -1,0 +1,48 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.DeqIterator']" name="name">
+    AscendingDequeIterator
+  </attr>
+
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ArrayDeque.DescendingIterator']" name="name">
+    DescendingDequeIterator
+  </attr>
+
+  
+  
+  <!-- 커스텀 -->
+  <!-- ViewMapper 
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView.ViewMapper']" name="visibility">
+    public
+  </attr>
+-->
+<!-- 커스텀 -->
+  
+  
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/method[@name='getAdapter' and count(parameter)=0]"
+		name="propertyName"></attr>
+
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/method[@name='setAdapter' and count(parameter)=1 and parameter[1][@type='android.widget.Adapter']]"
+		name="propertyName"></attr>
+
+
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/method[@name='getAdapter']" name="name">GetAdapter</attr>
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/method[@name='getAdapter']" name="abstract">true</attr>
+
+<!--
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']/class[@name='ReaderView']/field[@name='viewMapper']" name="managedName">InnerViewMapper</attr>
+-->
+
+
+  <!-- Normalize the namespace for .NET -->
+  <attr path="/api/package[@name='com.artifex.mupdfdemo']" name="managedName">
+    Com.Artifex.MuPdfDemo
+  </attr>
+</metadata>
