@@ -49,7 +49,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
     public override bool OnSingleTapUp(MotionEvent e)  ...
 
   
-**viewer swipable 어댑터 , 제스처등록 **  
+**pdf를 View 객체에 등록한다.**  
 
     if (_core == null)
     return;
@@ -59,10 +59,11 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
     mDocView.SetAdapter(mAdapter);
     mDocView.DisplayedViewIndex = page;
 
-**마지막으로 액티비티 레이아웃에 등록합니다**
+**마지막으로 액티비티 레이아웃에 pdfViewer를 등록합니다**
 
     mPDFView.AddView(mDocView);
 
 
 # 메모리관리 #
 
+activity 종료시 모든 MuPDF객체의 **Dispose**가 필요하며 ImageView와 Drawable객체는 **Release**후 **Dispose**합니다. 
