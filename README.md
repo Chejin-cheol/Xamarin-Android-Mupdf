@@ -66,7 +66,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
 
 # 메모리관리 #
 
-activity 종료시 모든 MuPDF객체의 **Dispose**가 필요하며 ImageView와 Drawable객체는 **Release**후 **Dispose**합니다. 
+**activity 종료시 모든 MuPDF객체의 Dispose가 필요하며 ImageView와 Drawable객체는 Release후 Dispose합니다.** 
 
 **core객체의 반환**    
 
