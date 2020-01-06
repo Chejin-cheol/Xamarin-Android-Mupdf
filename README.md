@@ -22,12 +22,15 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.
         protected MuPDFCore _core;
         private MuPDFReaderView mDocView;
         private MuPDFPageAdapter mAdapter;
+        Android.Widget.RelativeLayout mPDFView;
 
-pdf 객체를 초기화
+MuPDFCore: pdff 렌더링을 위한 jni 코어
 
+
+코어 객체를 초기화
     try
     {
-        MuPDFCore core = new MuPDFCore(this, path);
+        MuPDFCore core = new MuPDFCore(this, pdf_path);
         OutlineActivityData.Set(null);
         return core;
     }
