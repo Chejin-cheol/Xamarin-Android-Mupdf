@@ -14,7 +14,6 @@ Xamarin-Android에서 이용가능한 Mupdf Binding  Library
 해당라이븝러리 참조
     using Com.Artifex.MuPdfDemo;
 
-<br>
     public class PDFActivity : Activity
     {
         protected MuPDFCore _core;
