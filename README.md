@@ -11,8 +11,6 @@ Xamarin-Android에서 이용가능한 Mupdf Binding  Library
 
 # 사용 #
 
-**PDFActivity.cs**
-
 pdf를 바인딩하여 사용할 액티비티를 구성합니다.
 
 **해당라이븝러리 참조
