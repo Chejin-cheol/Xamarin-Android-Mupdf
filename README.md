@@ -28,6 +28,7 @@ MuPDFCore: pdff 렌더링을 위한 jni 코어
 
 
 코어 객체를 초기화
+
     try
     {
         MuPDFCore core = new MuPDFCore(this, pdf_path);
