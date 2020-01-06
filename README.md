@@ -25,9 +25,6 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.
         private MuPDFPageAdapter mAdapter;
         Android.Widget.RelativeLayout mPDFView;
 
-MuPDFCore: pdff 렌더링을 위한 jni 코어
-
-
 **코어 객체를 초기화**
 
     try
