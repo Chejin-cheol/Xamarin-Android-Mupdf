@@ -14,6 +14,7 @@ Xamarin-Android에서 이용가능한 Mupdf Binding  Library
 pdf를 바인딩하여 사용할 액티비티를 구성합니다.
 
 해당라이븝러리 참조
+
     using Com.Artifex.MuPdfDemo;
 
     public class PDFActivity : Activity
@@ -23,6 +24,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.
         private MuPDFPageAdapter mAdapter;
 
 pdf 객체를 초기화
+
     try
     {
         MuPDFCore core = new MuPDFCore(this, path);
