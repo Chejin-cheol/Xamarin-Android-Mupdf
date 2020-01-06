@@ -11,9 +11,10 @@ Xamarin-Android에서 이용가능한 Mupdf Binding  Library
 # 사용 #
 
 **PDFActivity.cs**
+
 pdf를 바인딩하여 사용할 액티비티를 구성합니다.
 
-해당라이븝러리 참조
+**해당라이븝러리 참조
 
     using Com.Artifex.MuPdfDemo;
 
@@ -44,7 +45,8 @@ MuPDFCore: pdff 렌더링을 위한 jni 코어
     }
     
     
- viewer gesture를 interface 구현을 통해 접근
+ **viewer gesture를 interface 구현을 통해 접근**
+ 
     XFMuPDFReaderView : MuPDFReaderView
     
     protected override void OnSizeChanged(int w, int h, int oldw, int oldh) ...
