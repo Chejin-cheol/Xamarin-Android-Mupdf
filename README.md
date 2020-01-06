@@ -54,3 +54,13 @@ MuPDFCore: pdff 렌더링을 위한 jni 코어
     public override bool OnSingleTapUp(MotionEvent e)  ...
 
   
+**viewer swipable 어댑터 , 제스처등록 **  
+    if (_core == null)
+    return;
+
+    // Now create the UI.
+    // First create the document view
+    mDocView = new XFMuPDFReaderView(this);
+    mAdapter = new MuPDFPageAdapter(this, _core);
+    mDocView.SetAdapter(mAdapter);
+    mDocView.DisplayedViewIndex = page;
