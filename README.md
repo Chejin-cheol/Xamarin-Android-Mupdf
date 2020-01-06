@@ -6,37 +6,81 @@ Xamarin-Android에서 이용가능한 Mupdf Binding  Library
 **대상 :** xamarin.forms-project / xamarin.android-project <br>
 **archetecture:** arm-7 , arm-64 <br>
 
-# 사용 #
-    using Com.Artifex.MuPdfDemo;
 
+
+# 사용 #
 
 **PDFActivity.cs**
-
 해당라이븝러리 참조
+    using Com.Artifex.MuPdfDemo;
 
+<br>
     public class PDFActivity : Activity
     {
         protected MuPDFCore _core;
         private MuPDFReaderView mDocView;
         private MuPDFPageAdapter mAdapter;
 
-객체 구성
+
 <br>
 
+    protected override void OnCreate(Bundle savedInstanceState)
+    {
+        base.OnCreate(savedInstanceState);
+        SetContentView(Resource.Layout.activity_main);
 
-     protected override void OnCreate(Bundle savedInstanceState)
+        mPDFView = (Android.Widget.RelativeLayout)FindViewById(Resource.Id.pdfView);
+
+        var path = new Android_Path();
+        var file_path = Android.Net.Uri.Parse("data path");
+        var uri = Android.Net.Uri.Decode(file_path.EncodedPath);
+        _core = openFile(uri);
+        setMuPDFView(page);
+    } 
+    
+    
+    private MuPDFCore openFile(String path)
         {
-            base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.hymn_layout);
-            var page = int.Parse(Intent.GetStringExtra("page")) - 1;
+            try
+            {
+                MuPDFCore core = new MuPDFCore(this, path);
+                OutlineActivityData.Set(null);
+                return core;
+            }
+            catch (Exception e)
+            {
 
-            mPDFView = (Android.Widget.RelativeLayout)FindViewById(Resource.Id.pdfView);
+                Console.WriteLine("MuPDFCore-openFile: (error)" + e);
 
-            var path = new Android_Path();
-            var file_path = Android.Net.Uri.Parse("file://" + path.getLocalPath("Hymn", "hymn.pdf"));
-            var uri = Android.Net.Uri.Decode(file_path.EncodedPath);
-            _core = openFile(uri);
-            setMuPDFView(page);
+                return null;
+            }
+        }
 
-        }        
+        public void setMuPDFView(int page)
+        {
+            if (_core == null)
+                return;
+
+            // Now create the UI.
+            // First create the document view
+            mDocView = new XFMuPDFReaderView(this);
+            mAdapter = new MuPDFPageAdapter(this, _core);
+            mDocView.SetAdapter(mAdapter);
+            mDocView.DisplayedViewIndex = page;
+
+
+            // Stick the document view and the buttons overlay into a parent view
+
+            if (mPDFView != null)
+            {
+                try
+                {
+                    mPDFView.AddView(mDocView);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e + "     <===========");
+                }
+            }
+        }
   
