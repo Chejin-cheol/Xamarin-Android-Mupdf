@@ -67,3 +67,27 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
 # 메모리관리 #
 
 activity 종료시 모든 MuPDF객체의 **Dispose**가 필요하며 ImageView와 Drawable객체는 **Release**후 **Dispose**합니다. 
+
+**core객체의 반환**    
+    _core.OnDestroy();
+    _core.Dispose();
+    _core = null;
+    
+**viewer 객체의 리소스 반환**
+
+    for (int i = 0; i < mDocView.ChildCount; i++)
+    {
+        MuPDFPageView mupdfPageView = (MuPDFPageView)mDocView.GetChildAt(i);
+        ((IMuPDFView)mupdfPageView).ReleaseBitmaps();
+        ((IMuPDFView)mupdfPageView).ReleaseResources();
+
+        if (mDocView.MChildViews.ValueAt(i) != mupdfPageView)
+        {
+            var view = (IMuPDFView)mDocView.MChildViews.ValueAt(i);
+            view.ReleaseBitmaps();
+            view.ReleaseResources();
+            view.Dispose();
+            view = null;
+        }
+    
+    
