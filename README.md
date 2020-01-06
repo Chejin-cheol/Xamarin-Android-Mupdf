@@ -42,6 +42,13 @@ MuPDFCore: pdff 렌더링을 위한 jni 코어
 
         return null;
     }
-
+    
+    
+ 페이지 제스퍼를 interface 구현을 통해 접근
+    XFMuPDFReaderView : MuPDFReaderView
+    
+    protected override void OnSizeChanged(int w, int h, int oldw, int oldh) ...
+    protected override void OnMoveToChild(int i) ...
+    public override bool OnSingleTapUp(MotionEvent e)  ...
 
   
