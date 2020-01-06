@@ -63,3 +63,7 @@ MuPDFCore: pdff 렌더링을 위한 jni 코어
     mAdapter = new MuPDFPageAdapter(this, _core);
     mDocView.SetAdapter(mAdapter);
     mDocView.DisplayedViewIndex = page;
+
+**마지막으로 액티비티 레이아웃에 등록합니다**
+
+    mPDFView.AddView(mDocView);
