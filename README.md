@@ -45,7 +45,7 @@ MuPDFCore: pdff 렌더링을 위한 jni 코어
     }
     
     
- **viewer gesture를 interface 구현을 통해 접근**
+ **viewer gesture를 ReaderView 상속을 통해 접근**
  
     XFMuPDFReaderView : MuPDFReaderView
     
