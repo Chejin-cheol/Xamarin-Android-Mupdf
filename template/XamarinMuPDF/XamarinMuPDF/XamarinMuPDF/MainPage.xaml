@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinMuPDF"
+             xmlns:vm="clr-namespace:XamarinMuPDF.ViewModel"
+             xmlns:b="clr-namespace:XamarinMuPDF.Behaviors"
+             x:Class="XamarinMuPDF.MainPage"
+             x:Name="main">
+
+    <ContentPage.BindingContext>
+        <vm:MainViewModel x:Name="context"></vm:MainViewModel>
+    </ContentPage.BindingContext>
+
+
+    <StackLayout
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand">
+        <ListView
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            ItemsSource="{Binding Items}">
+
+            <ListView.Behaviors>
+                <b:ItemClickBehvior Context="{Binding BindingContext,Source={Reference main}}"></b:ItemClickBehvior>
+            </ListView.Behaviors>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand">
+                            <Label
+                                TextColor="Black"
+                                Text="{Binding Name}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
