@@ -17,7 +17,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
 
 **해당 라이브러리 참조**
 
-    **using Com.Artifex.MuPdfDemo;**
+    using Com.Artifex.MuPdfDemo;
 
     public class PDFActivity : Activity
     {
