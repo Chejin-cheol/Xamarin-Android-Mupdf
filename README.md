@@ -52,7 +52,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
     public override bool OnSingleTapUp(MotionEvent e)  ...
 
   
-**pdf를 View 객체에 등록한다.**  
+**pdf를 ReaderView 객체에 등록한다.**  
 
     if (_core == null)
     return;
