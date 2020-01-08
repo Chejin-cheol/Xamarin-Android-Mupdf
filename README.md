@@ -3,8 +3,11 @@ Xamarin-Android에서 이용가능한 Mupdf Binding  Library
 
 # 개요 #
 **Android-Mupdf-viewer를 Xamarin으로 바인딩하여 사용할 수 있는 dll 라이브러리** <br>
+
 **대상 :** xamarin.forms / xamarin.android <br>
-**archetecture:** arm-7 , arm-64 <br>
+**Archetecture :** arm-7 , arm-64 <br>
+**참조 :** https://github.com/viavansi/mupdf-android/tree/master/src/main/java/com/artifex
+
 
 
 # 사용 #
@@ -12,7 +15,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
 **Xamarin.Android**에서는 Intent를 통하여 Activity를 호출하고<br>
 **Xamarin.forms**에서는 DependecyService를 구현하여 Activity를 호출합니다. <br>
 
-**해당라이븝러리 참조**
+**해당 라이브러리 참조**
 
     using Com.Artifex.MuPdfDemo;
 
@@ -40,7 +43,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
     }
     
     
- **viewer gesture를 ReaderView 상속을 통해 접근**
+ **Viewer Gesture를 ReaderView 상속을 통해 접근**
  
     XFMuPDFReaderView : MuPDFReaderView
     
@@ -49,7 +52,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
     public override bool OnSingleTapUp(MotionEvent e)  ...
 
   
-**pdf를 View 객체에 등록한다.**  
+**pdf를 ReaderView 객체에 등록한다.**  
 
     if (_core == null)
     return;
