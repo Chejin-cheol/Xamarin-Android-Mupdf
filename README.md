@@ -43,7 +43,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
     }
     
     
- **viewer gesture를 ReaderView 상속을 통해 접근**
+ **Viewer Gesture를 ReaderView 상속을 통해 접근**
  
     XFMuPDFReaderView : MuPDFReaderView
     
