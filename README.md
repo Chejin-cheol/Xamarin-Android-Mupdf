@@ -15,7 +15,7 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
 **Xamarin.Android**에서는 Intent를 통하여 Activity를 호출하고<br>
 **Xamarin.forms**에서는 DependecyService를 구현하여 Activity를 호출합니다. <br>
 
-**해당라이븝러리 참조**
+**해당 라이브러리 참조**
 
     using Com.Artifex.MuPdfDemo;
 
