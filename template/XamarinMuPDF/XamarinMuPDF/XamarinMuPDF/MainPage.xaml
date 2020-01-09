@@ -32,6 +32,8 @@
                             HorizontalOptions="FillAndExpand">
                             <Label
                                 TextColor="Black"
+                                VerticalOptions="FillAndExpand"
+                                VerticalTextAlignment="Center"
                                 Text="{Binding Name}"/>
                         </StackLayout>
                     </ViewCell>
