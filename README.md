@@ -93,5 +93,5 @@ pdf를 바인딩하여 사용할 액티비티를 구성합니다.<br>
             view.Dispose();
             view = null;
         }
-    
+    }
     
